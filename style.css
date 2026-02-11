@@ -1,0 +1,189 @@
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --primary: #3db9bd;
+  --primary-soft: #eef2ff;
+  --secondary: #3faca3;
+  --border: #e5e7eb;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 40%);
+  color: var(--text-main);
+}
+
+.container {
+  width: 90%;
+  max-width: 720px;
+  margin: 24px auto 48px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+h1 {
+  margin: 0 0 16px 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+#actionSelector {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background-color: white;   /* αρχικό λευκό */
+  color: var(--text-main);   /* αρχικό χρώμα κειμένου */
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* ομαλή αλλαγή χρώματος */
+}
+
+
+
+textarea, input[type="text"], input[type="file"] {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  transition: border .15s ease, box-shadow .15s ease;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(47, 115, 128, 0.08);
+}
+
+button {
+    padding: 10px 16px;
+    background-color: #41cec7;  /* κύριο χρώμα */
+    color: white;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform .05s ease, box-shadow .15s ease, background-color .15s ease;
+}
+
+button:hover {
+    background-color: #26888b;  /* hover χρώμα */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #7ec8ca;
+    cursor: not-allowed;
+}
+
+
+
+.result, .image-container, .voice-container, .pdf-container {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--primary-soft);
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.loader {
+  display: none;
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+#pdfViewer {
+  width: 100%;
+  height: 600px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-top: 16px;
+  display: block;
+}
+
+#pdfQuestionSection {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f0f9ff;
+}
+
+#chatContainer {
+  border: 1px solid var(--border);
+  padding: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.userMessage {
+  background: #eef2ff;
+  color: #2e7781;
+  margin-left: auto;
+}
+
+.botMessage {
+  background: #ecfeff;
+  color: #164e63;
+  margin-right: auto;
+}
+
+.section-spacer { margin-top: 16px; }
+
+@media (max-width: 600px) {
+  .container { padding: 16px; }
+  h1 { font-size: 1.4rem; }
+}
+
+.header {
+    display: flex;
+    align-items: center;   /* τα ευθυγραμμίζει κάθετα στο κέντρο */
+    gap: 10px;             /* απόσταση μεταξύ εικόνας και τίτλου */
+}
+
+.header img {
+    width: 40px;  /* ρύθμισε το μέγεθος όπως θες */
+    height: auto;
+}
+

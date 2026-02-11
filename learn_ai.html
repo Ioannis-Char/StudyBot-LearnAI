@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text, Image & Voice Generator</title>
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Text, Image & Voice Generator</title>
+
+</head>
+<body>
+  <!-- The rest of your HTML and JavaScript remains exactly the same -->
+</body>
+</html>
+
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <div class="container">
+   
+        <div class="header">
+	    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Paomedia_small-n-flat_book.svg" alt="Icon">
+	    <h1>Your AI StudyBot</h1>
+	</div>
+
+        <select id="actionSelector">
+            <option value="text">Generate Text</option>
+            <option value="image">Generate Image</option>
+            <option value="voice">Convert Voice to Text</option>
+            <option value="pdf">Upload PDF</option>
+        </select>
+
+        <!-- Text Section -->
+        <div id="textSection">
+            <textarea id="prompt" placeholder="Enter your text here..."></textarea>
+            <button id="generateTextBtn">Generate Text</button>
+            <div id="loader" style="display: none;">Loading...</div>
+            <div id="chatContainer"></div>
+            <div id="textResult" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- Image Section -->
+        <div id="imageSection" style="display: none;">
+            <textarea id="imagePrompt" placeholder="Describe the image you want to generate..."></textarea>
+            <button id="generateImageBtn">Generate Image</button>
+            <div id="imageContainer" class="image-container"></div>
+        </div>
+
+        <!-- Voice Section -->
+        <div id="voiceSection" style="display: none;">
+            <button id="startVoiceBtn">Start Voice Recognition</button>
+            <textarea id="voiceText" placeholder="Your speech will appear here..."></textarea>
+        </div>
+
+    <!-- PDF Section -->
+<div id="pdfSection" style="display: none;">
+    <input type="file" id="pdfInput" accept="application/pdf" />
+    <button id="uploadPdfBtn">Upload PDF</button>
+    <div id="pdfResult" class="pdf-container"></div>
+    <iframe id="pdfViewer" type="application/pdf"></iframe>
+    <div id="pdfContents"></div>
+</div>
+
+  <!-- PDF Question Section -->
+  <div id="pdfQuestionSection" style="display: none;">
+    <input type="text" id="question" placeholder="Enter your question">
+    <textarea id="context" placeholder="Extracted text will appear here..." rows="10" cols="50"></textarea>
+    <button id="askQuestionBtn">Ask Question</button>
+    <div id="responseContainer"></div>
+    <div id="loader" class="loader">Loading...</div>
+  
+
+</div>
+
+</div>  
+     <div id="loader" class="loader">Loading...</div>
+</div>
+       
+<script src="learn_ai.js"></script>
+
+</body>
+</html>
